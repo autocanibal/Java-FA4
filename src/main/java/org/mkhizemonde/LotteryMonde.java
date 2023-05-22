@@ -63,6 +63,9 @@ public class LotteryMonde {
             if (userGuesses[2] == lotteryNumbers[2]) {
                 numCorrectGuesses++;
             }
+            if (userGuesses[0] == lotteryNumbers[0] && userGuesses[1] == lotteryNumbers[1] && userGuesses[2] == lotteryNumbers[2]) {
+                numCorrectGuesses = 4;
+            }
 
 
             // Calculate the amount of money won
@@ -73,6 +76,8 @@ public class LotteryMonde {
                 winnings = 100;
             } else if (numCorrectGuesses == 3) {
                 winnings = 1000;
+            } else if (numCorrectGuesses == 4) {
+                winnings = 1000000;
             }
 
             // Display the results
