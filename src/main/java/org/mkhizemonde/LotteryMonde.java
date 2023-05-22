@@ -36,17 +36,38 @@ public class LotteryMonde {
 
             // Compare the user's guesses with the lottery numbers
             int numCorrectGuesses = 0;
-            for (int i = 0; i < 3; i++) {
-                if (userGuesses[i] == lotteryNumbers[i]) {
-                    numCorrectGuesses++;
-                }
+            if (userGuesses[0] == lotteryNumbers[0]) {
+                numCorrectGuesses++;
             }
+            if (userGuesses[0] == lotteryNumbers[1]) {
+                numCorrectGuesses++;
+            }
+            if (userGuesses[0] == lotteryNumbers[2]) {
+                numCorrectGuesses++;
+            }
+            if (userGuesses[1] == lotteryNumbers[0]) {
+                numCorrectGuesses++;
+            }
+            if (userGuesses[1] == lotteryNumbers[1]) {
+                numCorrectGuesses++;
+            }
+            if (userGuesses[1] == lotteryNumbers[2]) {
+                numCorrectGuesses++;
+            }
+            if (userGuesses[2] == lotteryNumbers[0]) {
+                numCorrectGuesses++;
+            }
+            if (userGuesses[2] == lotteryNumbers[1]) {
+                numCorrectGuesses++;
+            }
+            if (userGuesses[2] == lotteryNumbers[2]) {
+                numCorrectGuesses++;
+            }
+
 
             // Calculate the amount of money won
             int winnings = 0;
-            if (numCorrectGuesses == 0) {
-                winnings = 0;
-            } else if (numCorrectGuesses == 1) {
+            if (numCorrectGuesses == 1) {
                 winnings = 10;
             } else if (numCorrectGuesses == 2) {
                 winnings = 100;
